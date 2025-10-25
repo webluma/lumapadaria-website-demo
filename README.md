@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Luma Padaria - Demo Live
 
-## Getting Started
+Demo ao vivo para padarias com site moderno e responsivo. Solução digital completa para padarias que buscam presença online profissional.
 
-First, run the development server:
+## 🥖 Sobre o Projeto
+
+Este é um site demo desenvolvido para demonstrar as capacidades de um website moderno para padarias. O projeto inclui todas as funcionalidades essenciais que uma padaria precisa para ter uma presença digital eficaz.
+
+## ✨ Funcionalidades
+
+### 🏪 **Seções Principais**
+
+- **Hero Section** - Apresentação impactante com carrossel de imagens
+- **Delícias** - Catálogo de produtos (pães, doces, salgados, cafés)
+- **Banoffee** - Destaque para produto ícone da padaria
+- **Encomendas** - Sistema de pedidos (iFood e WhatsApp)
+- **Unidades** - Localização das filiais com carrossel
+- **Footer** - Links e informações de contato
+
+### 📱 **Recursos Técnicos**
+
+- Design responsivo (mobile-first)
+- Carrossel infinito automático
+- Imagens otimizadas com Next.js
+- Interface moderna e intuitiva
+- Navegação fluida entre seções
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Next.js 14** - Framework React para produção
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização moderna
+- **Next/Image** - Otimização de imagens
+- **React Hooks** - Gerenciamento de estado
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+
+- Node.js 18+
+- npm ou yarn
+
+### Instalação
 
 ```bash
+# Clone o repositório
+git clone [url-do-repositorio]
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000) para visualizar o site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── components/
+│   ├── layout/          # Header e Footer
+│   ├── sections/        # Seções da página
+│   └── ui/              # Componentes reutilizáveis
+├── data/
+│   └── siteData.ts      # Dados do site
+├── types/
+│   └── index.ts         # Tipos TypeScript
+└── globals.css          # Estilos globais
+```
 
-## Learn More
+## 🎨 Personalização
 
-To learn more about Next.js, take a look at the following resources:
+O site é facilmente personalizável através do arquivo `app/data/siteData.ts`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Informações da empresa**
+- **Produtos e categorias**
+- **Localização das unidades**
+- **Links de contato**
+- **Textos e descrições**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📞 Contato
 
-## Deploy on Vercel
+**WebLuma | Desenvolvimento Web**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Curitiba, PR
+- Desenvolvido WebLuma | Desenvolvimento Web
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 Licença
+
+Este projeto é uma demonstração para fins comerciais. Todos os direitos reservados.
+
+---
+
+_Demo-live para padarias - Solução digital profissional para o setor de panificação_
