@@ -22,7 +22,7 @@ export default function Hero({ images, title, subtitle }: HeroProps) {
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Carrossel de Imagens */}
-      <div className="absolute inset-0 mx-4 my-8">
+      <div className="absolute inset-0 mx-2 sm:mx-4 my-4 sm:my-8">
         {images.map((image, index) => (
           <div
             key={index}
@@ -42,12 +42,12 @@ export default function Hero({ images, title, subtitle }: HeroProps) {
 
       {/* Conteúdo do Hero */}
       <div className="relative z-10 flex items-center justify-center min-h-screen">
-        <div className="text-center max-w-6xl mx-auto px-6">
-          <h1 className="text-6xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">
+        <div className="text-center max-w-6xl mx-auto px-4 sm:px-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold text-white leading-tight drop-shadow-lg">
             {title}
           </h1>
           {subtitle && (
-            <p className="text-2xl text-white mt-4 drop-shadow-lg">
+            <p className="text-lg sm:text-xl lg:text-2xl text-white mt-4 drop-shadow-lg">
               {subtitle}
             </p>
           )}
@@ -55,13 +55,13 @@ export default function Hero({ images, title, subtitle }: HeroProps) {
       </div>
 
       {/* Indicadores do Carrossel */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <div className="flex space-x-2">
           {images.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImage(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                 index === currentImage
                   ? "bg-white scale-125"
                   : "bg-white bg-opacity-50 hover:bg-opacity-75"

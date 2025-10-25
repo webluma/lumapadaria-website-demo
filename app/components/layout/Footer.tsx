@@ -16,43 +16,47 @@ export default function Footer({
 }: FooterProps) {
   return (
     <footer className="bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Espaço em branco */}
-        <div className="py-8"></div>
+        <div className="py-4 sm:py-6 lg:py-8"></div>
 
         {/* Primeira linha */}
-        <div className="border-t border-gray-200 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="border-t border-gray-200 py-6 sm:py-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0">
             {/* Logo LUMA - Esquerda */}
-            <div className="flex items-center mb-6 md:mb-0">
-              <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">L</span>
+            <div className="flex items-center">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-black rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-xs sm:text-sm">
+                  L
+                </span>
               </div>
-              <span className="ml-2 text-black font-bold text-lg">LUMA</span>
+              <span className="ml-2 text-black font-bold text-base sm:text-lg">
+                LUMA
+              </span>
             </div>
 
             {/* Links centralizados */}
-            <div className="flex flex-wrap justify-center space-x-8 mb-6 md:mb-0">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8">
               {links.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
-                  className="text-black text-sm font-medium uppercase hover:text-gray-600 transition-colors"
+                  className="text-black text-xs sm:text-sm font-medium uppercase hover:text-gray-600 transition-colors"
                 >
                   {link.title}
                 </a>
               ))}
             </div>
 
-            {/* Ícones Instagram - Direita */}
-            <div className="flex space-x-4">
+            {/* Ícones Redes Sociais - Direita */}
+            <div className="flex space-x-3 sm:space-x-4">
               {/* Instagram Icon */}
               <a
                 href="#"
-                className="w-6 h-6 bg-black rounded flex items-center justify-center"
+                className="w-5 h-5 sm:w-6 sm:h-6 bg-black rounded flex items-center justify-center hover:bg-gray-800 transition-colors"
               >
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="w-3 h-3 sm:w-4 sm:h-4 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -63,10 +67,10 @@ export default function Footer({
               {/* Facebook Icon */}
               <a
                 href="#"
-                className="w-6 h-6 bg-black rounded flex items-center justify-center"
+                className="w-5 h-5 sm:w-6 sm:h-6 bg-black rounded flex items-center justify-center hover:bg-gray-800 transition-colors"
               >
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="w-3 h-3 sm:w-4 sm:h-4 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -79,15 +83,19 @@ export default function Footer({
 
         {/* Segunda linha */}
         <div className="border-t border-gray-200 py-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
             {/* Copyright e WebLuma - Esquerda */}
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <p className="text-gray-500 text-sm">{copyright}</p>
+            <div className="flex items-center">
+              <p className="text-gray-500 text-xs sm:text-sm text-center sm:text-left">
+                {copyright}
+              </p>
             </div>
 
             {/* Desenvolvido por WebLuma - Direita */}
             <div>
-              <p className="text-gray-500 text-sm">{developer}</p>
+              <p className="text-gray-500 text-xs sm:text-sm text-center sm:text-right">
+                {developer}
+              </p>
             </div>
           </div>
         </div>

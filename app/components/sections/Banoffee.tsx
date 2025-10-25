@@ -35,8 +35,8 @@ export default function Banoffee({
             <Image
               src={image}
               alt={title}
-              width={400}
-              height={400}
+              width={600}
+              height={600}
               className="rounded-lg"
             />
           </div>
