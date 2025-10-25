@@ -1,79 +1,30 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import { siteData } from "../data/siteData";
+import { loadAdminData, AdminData } from "../data/adminData";
 
 export default function CoffeeBreakPage() {
-  const coffeeBreakOptions = [
-    {
-      id: "1",
-      title: "COFFEE BREAK 1",
-      units: "7 UNIDADES (DOCES E SALGADOS) POR PESSOA",
-      salgados: [
-        "Empadinha (frango ou palmito)",
-        "Mini Bauru de Frios",
-        "Mini Pão de Queijo",
-        "Salgados Fritos (coxinha, risoles de carne, bolinha de queijo, quibe, pastel de carne ou pastel de queijo)",
-      ],
-      doces: [
-        "Carolina (doce de leite, limão, brigadeiro, creme chiffon ou trufa)",
-        "Mini Churros",
-      ],
-      incluso: [
-        "300ml de bebida por pessoa (suco ou refrigerante)",
-        "Descartáveis (copos e guardanapos)",
-      ],
-      price: "R$ 17,50",
-      priceUnit: "por pessoa",
-    },
-    {
-      id: "2",
-      title: "COFFEE BREAK 2",
-      units: "8 UNIDADES (DOCES E SALGADOS) POR PESSOA",
-      salgados: [
-        "Mini Sanduíche (frios, salame italiano, salpicão de frango ou peito de peru)",
-        "Semi-folhado (frango ou palmito)",
-        "Mini Croissant de Queijo",
-        "Mini Bauru de Frios",
-        "Mini Pão de Queijo",
-        "Mini Pão de Batata",
-      ],
-      doces: [
-        "Carolina (doce de leite, limão, brigadeiro, creme chiffon ou trufa)",
-        "Mini Sonho de Goiaba",
-      ],
-      incluso: [
-        "400ml de bebida por pessoa (suco ou refrigerante)",
-        "Descartáveis (copos e guardanapos)",
-      ],
-      price: "R$ 20,50",
-      priceUnit: "por pessoa",
-    },
-    {
-      id: "3",
-      title: "COFFEE BREAK 3",
-      units: "10 UNIDADES (DOCES E SALGADOS) POR PESSOA",
-      salgados: [
-        "Mini Sanduíche (frios, salame italiano, salpicão de frango ou peito de peru)",
-        "Semi-folhado (frango ou palmito)",
-        "Salgados Fritos (coxinha, risoles de carne, bolinha de queijo, quibe, pastel de carne ou pastel de queijo)",
-        "Empadinha (frango ou palmito)",
-        "Mini Bauru de Frios",
-        "Mini Pão de Queijo",
-      ],
-      doces: [
-        "Carolina (doce de leite, limão, brigadeiro, creme chiffon ou trufa)",
-        "Mini Tortelete de Morango",
-        "Mini Sonho de Goiaba",
-        "Mini Churros",
-      ],
-      incluso: [
-        "400ml de bebida por pessoa (suco ou refrigerante)",
-        "Descartáveis (copos e guardanapos)",
-      ],
-      price: "R$ 24,50",
-      priceUnit: "por pessoa",
-    },
-  ];
+  const [adminData, setAdminData] = useState<AdminData | null>(null);
+
+  useEffect(() => {
+    const data = loadAdminData();
+    setAdminData(data);
+  }, []);
+
+  const coffeeBreakOptions =
+    adminData?.coffeeBreakKits.map((kit) => ({
+      id: kit.id,
+      title: kit.title,
+      units: kit.units,
+      salgados: kit.salgados,
+      doces: kit.doces,
+      incluso: kit.incluso,
+      price: `R$ ${kit.price}`,
+      priceUnit: kit.priceUnit,
+    })) || [];
 
   return (
     <div className="min-h-screen bg-white">
