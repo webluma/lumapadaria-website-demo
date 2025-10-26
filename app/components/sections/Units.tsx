@@ -61,12 +61,15 @@ export default function Units({ title, subtitle, units }: UnitsProps) {
           <h4 className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-3 sm:mb-4 font-medium uppercase tracking-wide">
             {subtitle}
           </h4>
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-amber-800 mb-6 sm:mb-8"
-            style={{ fontFamily: "serif" }}
-          >
-            {title}
-          </h2>
+          <div className="mb-6 sm:mb-8">
+            <Image
+              src={title}
+              alt="Unidades"
+              width={300}
+              height={80}
+              className="object-contain mx-auto"
+            />
+          </div>
         </div>
 
         {/* Carrossel infinito */}

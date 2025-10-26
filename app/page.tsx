@@ -17,7 +17,6 @@ export default function Home() {
       <Products products={siteData.products} />
 
       <Banoffee
-        title={siteData.banoffee.title}
         subtitle={siteData.banoffee.subtitle}
         description={siteData.banoffee.description}
         image={siteData.banoffee.image}

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface FooterProps {
   brandName: string;
   copyright: string;
@@ -25,14 +27,13 @@ export default function Footer({
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0">
             {/* Logo LUMA - Esquerda */}
             <div className="flex items-center">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-black rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xs sm:text-sm">
-                  L
-                </span>
-              </div>
-              <span className="ml-2 text-black font-bold text-base sm:text-lg">
-                LUMA
-              </span>
+              <Image
+                src="/images/home/padaria_logo.png"
+                alt="Luma Padaria"
+                width={100}
+                height={30}
+                className="object-contain"
+              />
             </div>
 
             {/* Links centralizados */}
@@ -53,7 +54,7 @@ export default function Footer({
               {/* Instagram Icon */}
               <a
                 href="#"
-                className="w-5 h-5 sm:w-6 sm:h-6 bg-black rounded flex items-center justify-center hover:bg-gray-800 transition-colors"
+                className="w-5 h-5 sm:w-6 sm:h-6 bg-amber-800 rounded flex items-center justify-center hover:bg-amber-900 transition-colors"
               >
                 <svg
                   className="w-3 h-3 sm:w-4 sm:h-4 text-white"
@@ -67,7 +68,7 @@ export default function Footer({
               {/* Facebook Icon */}
               <a
                 href="#"
-                className="w-5 h-5 sm:w-6 sm:h-6 bg-black rounded flex items-center justify-center hover:bg-gray-800 transition-colors"
+                className="w-5 h-5 sm:w-6 sm:h-6 bg-amber-800 rounded flex items-center justify-center hover:bg-amber-900 transition-colors"
               >
                 <svg
                   className="w-3 h-3 sm:w-4 sm:h-4 text-white"

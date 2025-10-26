@@ -37,7 +37,7 @@ export default function CoffeeBreakPage() {
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-4"
             style={{ fontFamily: "serif" }}
           >
-            COFFEE BREAK PARA EMPRESAS E EVENTOS
+            KITS PARA EMPRESAS E EVENTOS
           </h1>
         </div>
       </div>
@@ -53,18 +53,18 @@ export default function CoffeeBreakPage() {
           {/* Texto introdutório */}
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              A Luma Padaria oferece soluções completas de coffee break com
+              A Luma Padaria oferece soluções completas de kits eventos com
               qualidade, variedade e praticidade. Seja para reuniões,
-              treinamentos ou eventos corporativos, entregamos tudo pronto para
-              servir, com o cuidado e o sabor que são a marca da nossa história
-              desde 2010.
+              treinamentos ou eventos corporativos, aniversários, entregamos
+              tudo pronto para servir, com o cuidado e o sabor que são a marca
+              da nossa história desde 2010.
             </p>
           </div>
 
           {/* Título das opções */}
           <div className="text-center mb-6 sm:mb-8 lg:mb-12">
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-black">
-              Escolha o Coffee Break ideal para você
+              Escolha o Kit Evento ideal para você
             </h2>
           </div>
 

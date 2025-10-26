@@ -1,14 +1,12 @@
 import Image from "next/image";
 
 interface BanoffeeProps {
-  title: string;
   subtitle: string;
   description: string;
   image: string;
 }
 
 export default function Banoffee({
-  title,
   subtitle,
   description,
   image,
@@ -22,19 +20,11 @@ export default function Banoffee({
             {subtitle}
           </h4>
 
-          {/* Título principal em script elegante */}
-          <h2
-            className="text-6xl font-bold text-amber-800 mb-12"
-            style={{ fontFamily: "serif" }}
-          >
-            {title}
-          </h2>
-
           {/* Imagem centralizada */}
           <div className="flex justify-center mb-12">
             <Image
               src={image}
-              alt={title}
+              alt="Banoffee da Luma Padaria"
               width={600}
               height={600}
               className="rounded-lg"

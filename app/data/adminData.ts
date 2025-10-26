@@ -20,7 +20,7 @@ export const initialAdminData: AdminData = {
   coffeeBreakKits: [
     {
       id: "1",
-      title: "COFFEE BREAK 1",
+      title: "KIT EVENTO 1",
       units: "7 UNIDADES (DOCES E SALGADOS) POR PESSOA",
       price: "17,50",
       priceUnit: "por pessoa",
@@ -41,7 +41,7 @@ export const initialAdminData: AdminData = {
     },
     {
       id: "2",
-      title: "COFFEE BREAK 2",
+      title: "KIT EVENTO 2",
       units: "8 UNIDADES (DOCES E SALGADOS) POR PESSOA",
       price: "20,50",
       priceUnit: "por pessoa",
@@ -64,7 +64,7 @@ export const initialAdminData: AdminData = {
     },
     {
       id: "3",
-      title: "COFFEE BREAK 3",
+      title: "KIT EVENTO 3",
       units: "10 UNIDADES (DOCES E SALGADOS) POR PESSOA",
       price: "24,50",
       priceUnit: "por pessoa",

@@ -34,10 +34,16 @@ export default function Products({ products }: ProductsProps) {
 
               {/* Conteúdo do card */}
               <div className="p-4 sm:p-6 text-center">
-                {/* Título */}
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 uppercase">
-                  {product.name}
-                </h3>
+                {/* Título como imagem */}
+                <div className="mb-2 sm:mb-3">
+                  <Image
+                    src={product.name}
+                    alt={product.id}
+                    width={120}
+                    height={40}
+                    className="object-contain mx-auto"
+                  />
+                </div>
 
                 {/* Descrição */}
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">

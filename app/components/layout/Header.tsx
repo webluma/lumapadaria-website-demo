@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 
@@ -37,23 +38,15 @@ export default function Header() {
           {/* Center Logo */}
           <Link
             href="/"
-            className="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity"
+            className="flex items-center hover:opacity-80 transition-opacity"
           >
-            {/* Circular Logo */}
-            <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-black rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm sm:text-lg lg:text-xl">
-                L
-              </span>
-            </div>
-            {/* Brand Name */}
-            <div className="text-center">
-              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-black uppercase tracking-wide">
-                LUMA
-              </div>
-              <div className="text-xs sm:text-sm font-medium text-black uppercase tracking-wider">
-                PADARIA
-              </div>
-            </div>
+            <Image
+              src="/images/home/padaria_logo.png"
+              alt="Luma Padaria"
+              width={120}
+              height={40}
+              className="object-contain"
+            />
           </Link>
 
           {/* Right Navigation - Desktop */}
@@ -68,7 +61,7 @@ export default function Header() {
               href="/coffee-break"
               className="text-black hover:text-gray-600 transition-colors font-medium uppercase text-xs xl:text-sm"
             >
-              COFFEE BREAK
+              KIT EVENTOS
             </Link>
             <Link
               href="/contato"

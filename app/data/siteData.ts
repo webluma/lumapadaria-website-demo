@@ -16,25 +16,25 @@ export const siteData = {
     products: [
       {
         id: "paes",
-        name: "PÃES",
+        name: "/images/delicias/paes.png",
         description: "Do pão francês às receitas artesanais. Variedade e frescor em cada fornada.",
         image: "/images/paes.png"
       },
       {
         id: "doces",
-        name: "DOCES",
+        name: "/images/delicias/doces.png",
         description: "Tortas, bolos e sobremesas que deixam qualquer pausa mais gostosa.",
         image: "/images/doces.png"
       },
       {
         id: "salgados",
-        name: "SALGADOS",
+        name: "/images/delicias/salgados.png",
         description: "Clássicos de padaria e diversas opções especiais para qualquer hora.",
         image: "/images/salgados.png"
       },
       {
         id: "cafes",
-        name: "CAFÉS",
+        name: "/images/delicias/cafes.png",
         description: "Cafés especiais e bebidas quentes. Perfeitos para acompanhar nossos produtos.",
         image: "/images/cafes.png"
       }
@@ -44,25 +44,25 @@ export const siteData = {
   products: [
     {
       id: "paes",
-      name: "PÃES",
+      name: "/images/delicias/paes.png",
       description: "Do pão francês às receitas artesanais. Variedade e frescor em cada fornada.",
       image: "/images/paes.png"
     },
     {
       id: "doces",
-      name: "DOCES",
+      name: "/images/delicias/doces.png",
       description: "Tortas, bolos e sobremesas que deixam qualquer pausa mais gostosa.",
       image: "/images/doces.png"
     },
     {
       id: "salgados",
-      name: "SALGADOS",
+      name: "/images/delicias/salgados.png",
       description: "Clássicos de padaria e diversas opções especiais para qualquer hora.",
       image: "/images/salgados.png"
     },
     {
       id: "cafes",
-      name: "CAFÉS",
+      name: "/images/delicias/cafes.png",
       description: "Cafés especiais e bebidas quentes. Perfeitos para acompanhar nossos produtos.",
       image: "/images/cafes.png"
     }
@@ -70,7 +70,6 @@ export const siteData = {
 
 
   banoffee: {
-    title: "Banoffee",
     subtitle: "UM ÍCONE DA NOSSA COZINHA",
     description: "Pequeno no tamanho, mas gigante no sabor, ele carrega a tradição da Luma Padaria e o toque artesanal que transforma cada receita em uma obra-prima. Feito com uma base delicadamente crocante e recheios que derretem na boca, da intensidade do chocolate belga ao frescor das frutas selecionadas, o Banoffee conquistou seu lugar como ícone da nossa casa. Ele não é apenas um doce, é um pedacinho da nossa história que está presente nas mesas, nas celebrações e nos momentos que merecem ser inesquecíveis.",
     image: "/images/banoffee.png"
@@ -81,7 +80,7 @@ export const siteData = {
   },
 
   orders: {
-    title: "Encomendas",
+    title: "/images/home/encomendas1.png",
     subtitle: "FAÇA SEU PEDIDO",
     image: "/images/encomendas.png",
     options: [
@@ -115,7 +114,7 @@ export const siteData = {
   },
 
   units: {
-    title: "Unidades",
+    title: "/images/home/unidades.png",
     subtitle: "NOSSOS ENDEREÇOS",
     units: [
       { 

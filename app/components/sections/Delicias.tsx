@@ -44,9 +44,15 @@ export default function Delicias({ title, subtitle, products }: DeliciasProps) {
                 className="object-contain mx-auto mb-4"
               />
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 uppercase">
-                {product.name}
-              </h3>
+              <div className="mb-3">
+                <Image
+                  src={product.name}
+                  alt={product.id}
+                  width={120}
+                  height={40}
+                  className="object-contain mx-auto"
+                />
+              </div>
 
               <p className="text-gray-600 leading-relaxed">
                 {product.description}

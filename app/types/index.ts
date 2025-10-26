@@ -25,7 +25,7 @@ export interface Product {
   id: string;
   name: string;
   description: string;
-  icon: string;
+  image: string;
 }
 
 export interface ProductsProps {
@@ -76,7 +76,7 @@ export interface SiteData {
   delicias: {
     title: string;
     subtitle: string;
-    description: string[];
+    products: Product[];
   };
   products: Product[];
   tartelette: {
@@ -111,5 +111,6 @@ export interface SiteData {
     developer: string;
   };
 }
+
 
 
