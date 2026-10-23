@@ -147,9 +147,7 @@ export const siteData = {
     links: [
       { title: "UNIDADES", href: "/unidades" },
       { title: "ENCOMENDAS", href: "/encomendas" },
-      { title: "CONTATO", href: "/contato" },
-      { title: "TRABALHE CONOSCO", href: "/trabalhe-conosco" },
-      { title: "POLÍTICA DE PRIVACIDADE", href: "/privacidade" }
+      { title: "CONTATO", href: "/contato" }
     ],
     copyright: "© 2025 Grupo WebLuma | Curitiba",
     developer: "Desenvolvido por WebLuma | Desenvolvimento Web"

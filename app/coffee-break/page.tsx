@@ -1,18 +1,41 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useMemo, useSyncExternalStore } from "react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import { siteData } from "../data/siteData";
-import { loadAdminData, AdminData } from "../data/adminData";
+import { initialAdminData, type AdminData } from "../data/adminData";
+
+function subscribeToAdminData(onChange: () => void) {
+  window.addEventListener("storage", onChange);
+  return () => window.removeEventListener("storage", onChange);
+}
+
+function getStoredAdminData() {
+  try {
+    return window.localStorage.getItem("adminData");
+  } catch {
+    return null;
+  }
+}
+
+const getServerAdminData = () => null;
 
 export default function CoffeeBreakPage() {
-  const [adminData, setAdminData] = useState<AdminData | null>(null);
-
-  useEffect(() => {
-    const data = loadAdminData();
-    setAdminData(data);
-  }, []);
+  const storedData = useSyncExternalStore(
+    subscribeToAdminData,
+    getStoredAdminData,
+    getServerAdminData,
+  );
+  const adminData = useMemo<AdminData>(() => {
+    if (!storedData) return initialAdminData;
+    try {
+      const data = JSON.parse(storedData) as AdminData;
+      return Array.isArray(data.coffeeBreakKits) ? data : initialAdminData;
+    } catch {
+      return initialAdminData;
+    }
+  }, [storedData]);
 
   const coffeeBreakOptions =
     adminData?.coffeeBreakKits.map((kit) => ({

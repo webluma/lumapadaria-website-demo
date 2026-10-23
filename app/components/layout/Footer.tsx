@@ -95,7 +95,9 @@ export default function Footer({
             {/* Desenvolvido por WebLuma - Direita */}
             <div>
               <p className="text-gray-500 text-xs sm:text-sm text-center sm:text-right">
-                {developer}
+                <a href="https://www.webluma.dev/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  {developer}
+                </a>
               </p>
             </div>
           </div>

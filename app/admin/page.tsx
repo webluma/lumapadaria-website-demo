@@ -1,57 +1,28 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import ProtectedRoute from "../components/auth/ProtectedRoute";
 import { siteData } from "../data/siteData";
 import {
   loadAdminData,
-  saveAdminData,
-  updateKitPrice,
   updateKit,
   AdminData,
   CoffeeBreakKit,
 } from "../data/adminData";
 
 function AdminContent() {
-  const [adminData, setAdminData] = useState<AdminData | null>(null);
+  const [adminData, setAdminData] = useState<AdminData>(loadAdminData);
   const [isEditing, setIsEditing] = useState(false);
-  const [editingPrices, setEditingPrices] = useState<{ [key: string]: string }>(
-    {}
-  );
   const [editingKits, setEditingKits] = useState<{
     [key: string]: Partial<CoffeeBreakKit>;
-  }>({});
-
-  useEffect(() => {
-    const data = loadAdminData();
-    setAdminData(data);
-    // Inicializar dados para edição
-    const prices: { [key: string]: string } = {};
-    const kits: { [key: string]: Partial<CoffeeBreakKit> } = {};
-    data.coffeeBreakKits.forEach((kit) => {
-      prices[kit.id] = kit.price;
-      kits[kit.id] = {
-        title: kit.title,
-        units: kit.units,
-        price: kit.price,
-        priceUnit: kit.priceUnit,
-        salgados: [...kit.salgados],
-        doces: [...kit.doces],
-        incluso: [...kit.incluso],
-      };
-    });
-    setEditingPrices(prices);
-    setEditingKits(kits);
-  }, []);
-
-  const handlePriceChange = (kitId: string, value: string) => {
-    setEditingPrices((prev) => ({
-      ...prev,
-      [kitId]: value,
-    }));
-  };
+  }>(() => Object.fromEntries(adminData.coffeeBreakKits.map((kit) => [kit.id, {
+    ...kit,
+    salgados: [...kit.salgados],
+    doces: [...kit.doces],
+    incluso: [...kit.incluso],
+  }])));
 
   const handleKitChange = (
     kitId: string,
@@ -142,10 +113,8 @@ function AdminContent() {
     if (!adminData) return;
 
     // Restaurar valores originais
-    const prices: { [key: string]: string } = {};
     const kits: { [key: string]: Partial<CoffeeBreakKit> } = {};
     adminData.coffeeBreakKits.forEach((kit) => {
-      prices[kit.id] = kit.price;
       kits[kit.id] = {
         title: kit.title,
         units: kit.units,
@@ -156,7 +125,6 @@ function AdminContent() {
         incluso: [...kit.incluso],
       };
     });
-    setEditingPrices(prices);
     setEditingKits(kits);
     setIsEditing(false);
   };
